@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  kogito-service:
+    image: org.kie.kogito.examples/dmn-quarkus-example:1.0.0-SNAPSHOT
+    ports:
+      - "8080:8080"
+    environment:
+      KOGITO_SERVICE_URL: "http://kogito-service:8080"
+
+  explainability-service:
+    image: org.kie.kogito/explainability-service-rest-daas:1.0.0-SNAPSHOT
+    depends_on:
+      - kogito-service
+    ports:
+      - "8081:8080"

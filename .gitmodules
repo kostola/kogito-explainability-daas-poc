@@ -1,0 +1,6 @@
+[submodule "kogito-apps"]
+	path = kogito-apps
+	url = https://github.com/kostola/kogito-apps.git
+[submodule "kogito-examples"]
+	path = kogito-examples
+	url = https://github.com/kostola/kogito-examples.git
